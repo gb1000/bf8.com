@@ -1,0 +1,286 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: #fff
+	text-align: center
+	font-weight: 400
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.header
+	background-image: url(../img/header_bg.jpg) 
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	padding: 42px 0 168px 0
+
+.logo-link
+	img
+		width: 180px
+
+.main-title
+	font-weight: 300
+	font-size: 45px
+	line-height: 54px
+	margin: 110px 0 10px 0
+	text-transform: capitalize
+	letter-spacing: 0.7px
+
+.main-subtitle
+	font-weight: 300
+	font-size: 24px
+	line-height: 33px
+	margin: 0
+	letter-spacing: 0.5px
+
+.about-us, .director
+	padding: 86px 0 0 0
+	color: #191919
+
+.about-us
+	.img-responsive
+		border-radius: 15px
+		margin: 0 auto 30px
+	.section-title
+		margin: 0 0 39px 0
+
+.section-title
+	color: #191919
+	font-size: 45px
+	line-height: 54px
+	font-weight: 300
+
+.about-us__description
+	text-align: left
+	font-size: 18px
+	line-height: 30px
+	p
+		margin-bottom: 30px
+
+.about-us__description--second
+	margin: 0 0 30px 0 
+
+.director
+	.section-title
+		margin: 0 0 19px 0
+
+h4
+	color: #595959
+	font-size: 24px
+	line-height: 33px
+	font-weight: 300
+
+.director-description
+	font-size: 18px
+	line-height: 30px
+	margin-top: 28px
+
+.director__quote
+	margin-top: 34px
+	font-size: 21px
+	line-height: 31px
+	font-family: "Helvetica-Oblique"
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 11px
+		background-color: #d92942
+		opacity: 0.1
+		margin-top: 10px
+
+.points
+	padding: 86px 0 0 0
+	color: #191919
+
+.points-list
+	margin: 65px 0 0 0
+
+.points-list__item
+	padding: 0 30px
+	text-align: left
+	border-left: 5px solid rgba(174, 174, 174, 0.35)
+	margin: 0 0 60px 0
+
+.points-list__item-title
+	font-size: 35px
+	color: #989898
+	font-weight: 300
+	line-height: 44px
+	margin: 0 0 10px 0
+
+.points-list__item-description
+	margin: 0
+	font-size: 16.3px
+
+.form-section
+	padding: 26px 0 50px 0
+	color: #191919
+	h4
+		margin: 19px 0 34px 0
+
+.sendmessage-form
+	padding: 36px
+	border-radius: 15px
+	background-color: #e8e8e8
+	text-align: left
+	label
+		margin-left: 2px
+		color: #595959
+		font-weight: 300
+		font-size: 20px
+		line-height: 31px
+	input, textarea
+		font-size: 17px
+		color: #cdcdcd
+		&::placeholder
+			opacity: 0.5
+
+.btn
+	color: #fff
+	line-height: 1
+	font-size: 18px
+	font-weight: 400
+	padding: 12px 40px
+
+.clearfix:after
+	content: ''
+	clear: both
+	display: table
+
+.decorative-line
+	width: 100%
+	height: 3px
+	background-color: #000
+	opacity: 0.2
+	margin: 100px 0 50px 0
+
+.contacts-title
+	color: #585858
+	font-size: 24px
+
+.contacts-address
+	font-size: 18px
+	line-height: 30px
+
+.footer
+	background-color: #0a0a0a
+	padding: 20px
+	text-align: center
+	.col-test
+		line-height: 49.95px
+	
+.copyright, .footer-phone
+	font-weight: 300
+	font-size: 13px
+
+// Preloader
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background: #fff
+	z-index: 999
+	transition: 1s all
+	opacity: 1
+	visibility: visible
+	
+.done
+	opacity: 0
+	visibility: hidden
+
+.sk-cube-grid 
+  width: 40px
+  height: 40px
+  margin: 0 auto
+  position: relative
+  top: 50%
+  transform: translate(0, -50%)
+
+
+.sk-cube-grid .sk-cube 
+	width: 33%
+	height: 33%
+	background-color: $accent
+	float: left
+	-webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out
+	animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out 
+
+.sk-cube-grid .sk-cube1 
+    -webkit-animation-delay: 0.2s
+    animation-delay: 0.2s 
+.sk-cube-grid .sk-cube2 
+    -webkit-animation-delay: 0.3s
+    animation-delay: 0.3s 
+.sk-cube-grid .sk-cube3 
+    -webkit-animation-delay: 0.4s
+    animation-delay: 0.4s 
+.sk-cube-grid .sk-cube4 
+    -webkit-animation-delay: 0.1s
+    animation-delay: 0.1s 
+.sk-cube-grid .sk-cube5 
+    -webkit-animation-delay: 0.2s
+    animation-delay: 0.2s 
+.sk-cube-grid .sk-cube6 
+    -webkit-animation-delay: 0.3s
+    animation-delay: 0.3s 
+.sk-cube-grid .sk-cube7 
+    -webkit-animation-delay: 0s
+    animation-delay: 0s 
+.sk-cube-grid .sk-cube8 
+    -webkit-animation-delay: 0.1s
+    animation-delay: 0.1s 
+.sk-cube-grid .sk-cube9 
+    -webkit-animation-delay: 0.2s
+    animation-delay: 0.2s 
+
+@-webkit-keyframes sk-cubeGridScaleDelay
+	0%, 70%, 100% 
+    	-webkit-transform: scale3D(1, 1, 1)
+        transform: scale3D(1, 1, 1)
+	35% 
+    	-webkit-transform: scale3D(0, 0, 1)
+        transform: scale3D(0, 0, 1)
+
+@keyframes sk-cubeGridScaleDelay
+	0%, 70%, 100% 
+    	-webkit-transform: scale3D(1, 1, 1)
+        transform: scale3D(1, 1, 1)
+	35%
+    	-webkit-transform: scale3D(0, 0, 1)
+        transform: scale3D(0, 0, 1)
+
+
+@import "media" // Always at the end
